@@ -2,24 +2,78 @@
     <string name="app_name">LoveDiary</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Emma</string>
+    <string name="nav_header_subtitle">emma.Black@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">设置</string>
 
-    <string name="menu_home">Home</string>
+    <string name="menu_home">我的日记</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
-    <string name="title_activity_login">Sign in</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="title_activity_login">登录</string>
+    <string name="prompt_email">邮箱</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_sign_in">登录</string>
+    <string name="action_sign_in_short">登录</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <string name="input_hint">Send message</string>
+    <string name="message_click_hint">Message click event</string>
+    <string name="message_long_click_hint">Message long press event</string>
+    <string name="avatar_click_hint">Avatar click event</string>
+
+    <!-- Request permission start -->
+    <string name="rationale_record_voice">This app needs access microphone to record voice.</string>
+    <string name="rationale_photo">This app needs access photos.</string>
+    <string name="rationale_camera">This app needs access camera.</string>
+    <string name="custom_menu">CUSTOM MENU</string>
+    <!-- Request permission end -->
+
+    <string-array name="messages_array">
+        <item>How are you</item>
+        <item>Fine. And you?</item>
+        <item>Me, too. Is there any news today?</item>
+        <item>Yep! I got a news here: boom! Tomorrow is the end of The Walking Dead!</item>
+        <item>Are you kidding me?</item>
+        <item>Absolutely not!</item>
+        <item>Jesus, that\'s crazy</item>
+        <item>I thought no one would gonna to make it</item>
+        <item>That\'s cruel, I don\'t like it, maybe there is a favourable turn</item>
+        <item>Hope so</item>
+    </string-array>
+
+    <string-array name="conversation">
+        <item>test</item>
+        <item>History message 1</item>
+        <item>History message 2</item>
+        <item>History message 3</item>
+        <item>History message 4</item>
+        <item>History message 5</item>
+        <item>History message 6</item>
+        <item>History message 7</item>
+        <item>History message 8</item>
+        <item>History message 9</item>
+        <item>History message 10</item>
+    </string-array>
 </resources>

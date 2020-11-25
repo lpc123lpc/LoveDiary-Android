@@ -2,7 +2,9 @@ package com.example.lovediary;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
+import com.example.lovediary.messages.MessageListActivity;
 import com.example.lovediary.ui.login.LoginActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -32,8 +34,9 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //       Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                //               .setAction("Action", null).show();
+                startActivity(new Intent(MainActivity.this, MessageListActivity.class));
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -54,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
         });
+        
     }
     
     @Override
@@ -68,5 +72,9 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+    
+    public void settingsOnClick(MenuItem item) {
+        startActivity(new Intent(MainActivity.this, SettingsActivity.class));
     }
 }

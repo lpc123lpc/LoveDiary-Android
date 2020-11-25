@@ -3,4 +3,13 @@
     <color name="colorPrimary">#F4A7B9</color>
     <color name="colorPrimaryDark">#64363C</color>
     <color name="colorAccent">#B19693</color>
+    <color name="colorSakura">#FEDFE1</color>
+    <color name="colorLightRed">#EB7A77</color>
+    <color name="colorRuri">#005CAF</color>
+
+    <color name="chat_title_bg">#427BED</color>
+    <color name="google_red">#FFC93437</color>
+    <color name="google_blue">#FF375BF1</color>
+    <color name="google_yellow">#FFF7D23E</color>
+    <color name="google_green">#FF34A350</color>
 </resources>
