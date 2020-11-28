@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/anniversary_card"
+        app:cardCornerRadius="20dp"
+        app:cardUseCompatPadding="true"
+        >
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="center"
+            android:id="@+id/anniversary_img"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:id="@+id/anniversary_name"
+                android:textSize="24sp"
+                android:visibility="visible"
+                tools:text="name"
+                android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="113dp"
+                android:id="@+id/anniversary_content"
+                tools:text="@tools:sample/lorem[6]"
+                android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+                android:layout_width="79dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/anniversary_date"
+                tools:text="@tools:sample/date/mmddyy"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimaryDark"/>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
