@@ -28,7 +28,8 @@ public class GalleryFragment extends Fragment {
 
     private List<AnniversaryCard> anniversaryCards;
     private RecyclerView anniversary_view;
-    
+    private AniViewAdapter adapter;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         galleryViewModel =
@@ -41,7 +42,7 @@ public class GalleryFragment extends Fragment {
             public void onClick(View view) {
                 //       Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 //               .setAction("Action", null).show();
-                startActivity(new Intent(getActivity(), AddAnniversary.class));
+                startActivityForResult(new Intent(getActivity(), AddAnniversary.class),200);
             }
         });
         anniversary_view = root.findViewById(R.id.rv_anniversary);
@@ -55,10 +56,14 @@ public class GalleryFragment extends Fragment {
 
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
 
     private void initCards(){
         anniversaryCards = new ArrayList<>();
-        anniversaryCards.add(new AnniversaryCard("在一起的日子","wuhu","2020/10/1","dog"));
+        anniversaryCards.add(new AnniversaryCard("在一起的日子","wuhu","2020/10/1",R.drawable.dog));
     }
 
     public void addCard(AnniversaryCard card){
@@ -66,11 +71,16 @@ public class GalleryFragment extends Fragment {
     }
 
     private void initialAdapter(){
-        AniViewAdapter adapter = new AniViewAdapter(anniversaryCards);
+        adapter = new AniViewAdapter(anniversaryCards);
         anniversary_view.setAdapter(adapter);
     }
 
-
-
-
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        assert data != null;
+        AnniversaryCard card = (AnniversaryCard) data.getSerializableExtra("card");
+        anniversaryCards.add(card);
+        initialAdapter();
+    }
 }

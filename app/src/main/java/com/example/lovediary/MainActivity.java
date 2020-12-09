@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import com.example.lovediary.messages.MessageListActivity;
+import com.example.lovediary.ui.gallery.GalleryFragment;
 import com.example.lovediary.ui.login.LoginActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -59,7 +62,21 @@ public class MainActivity extends AppCompatActivity {
         });
         
     }
-    
+
+    /*@Override
+    protected void onStart() {
+        super.onStart();
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        Intent intent = getIntent();
+        String str = intent.getStringExtra("id");
+        assert str != null;
+        if (str.equals("nav_gallery")){
+            transaction.replace(R.id.fragment_container_view_tag,new GalleryFragment());
+        }
+        transaction.commit();
+    }*/
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

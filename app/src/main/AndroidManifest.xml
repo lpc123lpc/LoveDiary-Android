@@ -16,7 +16,10 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ui.gallery.AddAnniversary"
+        <activity android:name=".ui.gallery.ChooseCard">
+        </activity>
+        <activity
+                android:name=".ui.gallery.AddAnniversary"
                 android:label="新建纪念日">
         </activity>
         <activity

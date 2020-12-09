@@ -54,11 +54,10 @@ public class AniViewAdapter extends RecyclerView.Adapter<AniViewAdapter.Annivers
 
     @Override
     public void onBindViewHolder(AnniversaryCardViewHolder cardViewHolder, int i) {
-        int drawable = R.drawable.dog;
         cardViewHolder.cardName.setText(anniversaryCards.get(i).name);
         cardViewHolder.cardContent.setText(anniversaryCards.get(i).content);
         cardViewHolder.cardDate.setText(anniversaryCards.get(i).date);
-        cardViewHolder.cardPhoto.setImageResource(drawable);
+        cardViewHolder.cardPhoto.setImageResource(anniversaryCards.get(i).imgId);
     }
 
     @Override

@@ -43,4 +43,6 @@
     <dimen name="aurora_height_bubble_hemline">5dp</dimen>
     <dimen name="aurora_Y_bubble_vertex">20dp</dimen>
     <dimen name="chat_title_bar_txt_size">20sp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>

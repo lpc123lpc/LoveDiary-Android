@@ -1,16 +1,18 @@
 package com.example.lovediary.ui.gallery;
 
-public class AnniversaryCard {
+import java.io.Serializable;
+
+public class AnniversaryCard implements Serializable {
     String name;
     String content;
     String date;
-    String img;
+    int imgId;
 
-    AnniversaryCard(String name, String content, String date,String img){
+    AnniversaryCard(String name, String content, String date,int img){
         this.name = name;
         this.content = content;
         this.date = date;
-        this.img = img;
+        this.imgId = img;
     }
 
 }
