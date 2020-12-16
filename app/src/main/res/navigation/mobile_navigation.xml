@@ -25,8 +25,8 @@
 
     <fragment
             android:id="@+id/nav_tools"
-            android:name="com.example.lovediary.ui.tools.ToolsFragment"
-            android:label="@string/menu_tools"
+            android:name="com.example.lovediary.ui.tools.activities.ClockActivity"
+            android:label="闹钟"
             tools:layout="@layout/fragment_tools"/>
 
     <fragment
