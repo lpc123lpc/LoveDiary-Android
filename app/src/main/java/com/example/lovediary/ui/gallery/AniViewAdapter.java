@@ -14,7 +14,8 @@ import com.example.lovediary.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AniViewAdapter extends RecyclerView.Adapter<AniViewAdapter.AnniversaryCardViewHolder> {
+public class AniViewAdapter extends RecyclerView.Adapter<AniViewAdapter.AnniversaryCardViewHolder> implements View.OnClickListener{
+
 
     public static class AnniversaryCardViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
@@ -63,5 +64,11 @@ public class AniViewAdapter extends RecyclerView.Adapter<AniViewAdapter.Annivers
     @Override
     public int getItemCount() {
         return anniversaryCards.size();
+    }
+
+    @Override
+    public void onClick(View v) {
+        RecyclerView.ViewHolder holder = (AnniversaryCardViewHolder) v.getTag();
+
     }
 }

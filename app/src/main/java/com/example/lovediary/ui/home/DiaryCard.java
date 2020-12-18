@@ -1,6 +1,8 @@
 package com.example.lovediary.ui.home;
 
-public class DiaryCard {
+import java.io.Serializable;
+
+public class DiaryCard implements Serializable {
     String name;
     String date;
     String content;
