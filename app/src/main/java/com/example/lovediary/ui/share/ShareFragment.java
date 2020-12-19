@@ -30,6 +30,7 @@ import java.util.Objects;
 public class ShareFragment extends Fragment {
     
     private ShareViewModel shareViewModel;
+    private int x;
     String user;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -75,7 +76,7 @@ public class ShareFragment extends Fragment {
                     out.write(data.getBytes());
                     out.flush();
                     out.close();
-                    int x;
+
                     connection.connect();
                     int code = connection.getResponseCode();
                     if (code == HttpURLConnection.HTTP_OK) {

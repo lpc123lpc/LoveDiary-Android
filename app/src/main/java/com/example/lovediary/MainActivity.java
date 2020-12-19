@@ -1,9 +1,13 @@
 package com.example.lovediary;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.lovediary.messages.MessageListActivity;
@@ -23,9 +27,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 
+import static com.example.lovediary.R.id.drawer_layout;
+
 public class MainActivity extends AppCompatActivity {
     
     private AppBarConfiguration mAppBarConfiguration;
+    String user;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, MessageListActivity.class));
             }
         });
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -57,25 +64,20 @@ public class MainActivity extends AppCompatActivity {
         navigationView.getHeaderView(0).findViewById(R.id.imageView).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                startActivityForResult(new Intent(MainActivity.this, LoginActivity.class),400);
             }
         });
         
     }
 
-    /*@Override
-    protected void onStart() {
-        super.onStart();
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-        Intent intent = getIntent();
-        String str = intent.getStringExtra("id");
-        assert str != null;
-        if (str.equals("nav_gallery")){
-            transaction.replace(R.id.fragment_container_view_tag,new GalleryFragment());
-        }
-        transaction.commit();
-    }*/
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        TextView textView = findViewById(R.id.nav_username);
+        SharedPreferences sharedPreferences = getSharedPreferences("my_user", Context.MODE_PRIVATE);
+        user = sharedPreferences.getString("user",null);
+        textView.setText(user);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

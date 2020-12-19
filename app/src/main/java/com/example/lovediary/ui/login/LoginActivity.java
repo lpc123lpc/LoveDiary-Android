@@ -141,9 +141,9 @@ public class LoginActivity extends AppCompatActivity {
                         }*/
                     }
                     if (x==49){
-
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                        startActivity(intent);
+                        setResult(400,intent);
+                        finish();
                     }
                     else{
                         show_dialog();
@@ -171,6 +171,5 @@ public class LoginActivity extends AppCompatActivity {
         System.out.println(sharedPreferences.getString("user",null));
         System.out.println("store right");
     }
-
 
 }

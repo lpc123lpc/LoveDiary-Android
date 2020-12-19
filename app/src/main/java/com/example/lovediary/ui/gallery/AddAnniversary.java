@@ -142,5 +142,4 @@ public class AddAnniversary extends AppCompatActivity {
         thread.start();
     }
 
-
 }
