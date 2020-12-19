@@ -160,7 +160,10 @@ public class LoginActivity extends AppCompatActivity {
             //
         }
         SharedPreferences sharedPreferences = getSharedPreferences("my_user", Context.MODE_PRIVATE);
-        updateUiWithUser();
+
+        if(x==49) {
+            updateUiWithUser();
+        }
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("user",username);
         editor.commit();

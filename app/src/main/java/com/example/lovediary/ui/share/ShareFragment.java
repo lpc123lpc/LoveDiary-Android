@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -42,7 +43,11 @@ public class ShareFragment extends Fragment {
             SharedPreferences sharedPreferences = getContext().getSharedPreferences("my_user", Context.MODE_PRIVATE);
             user = sharedPreferences.getString("user",null);
             System.out.println(user);
-            //match(editText.getText());
+            try {
+                match(user,editText.getText().toString());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         });
         return root;
     }
@@ -52,7 +57,7 @@ public class ShareFragment extends Fragment {
             @Override
             public void run() {
                 try {
-                    URL url = new URL("http://121.5.50.186:8080/op/register");
+                    URL url = new URL("http://121.5.50.186:8080/op/match");
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     connection.setConnectTimeout(3000);
                     connection.setDoOutput(true);
@@ -90,5 +95,11 @@ public class ShareFragment extends Fragment {
             }
         }));
         thread.start();
+        while (thread.isAlive()){
+
+        }
+        if (x==49){
+            Toast.makeText(requireActivity().getApplicationContext(), "match succeed", Toast.LENGTH_LONG).show();
+        }
     }
 }
