@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.lovediary.MainActivity;
 import com.example.lovediary.R;
 import com.example.lovediary.ui.login.LoginActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -46,7 +47,7 @@ public class HomeFragment extends Fragment {
         
         initCards();
         initializeAdapter();
-        Button button = root.findViewById(R.id.add_diary);
+        FloatingActionButton button = root.findViewById(R.id.add_diary);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
