@@ -22,7 +22,7 @@ public class ChooseCard extends AppCompatActivity {
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent.putExtra("id",R.drawable.dog);
+                intent.putExtra("id",R.drawable.img5);
                 setResult(100,intent);
                 finish();
             }

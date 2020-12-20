@@ -10,25 +10,23 @@
         >
 
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
+            android:layout_width="399dp"
+            android:layout_height="246dp"
             android:scaleType="center"
             android:id="@+id/anniversary_img"/>
 
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent" android:layout_margin="20dp">
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="53dp"
                 android:id="@+id/anniversary_name"
                 android:textSize="24sp"
-                android:visibility="visible"
                 tools:text="name"
                 android:textColor="@color/colorPrimaryDark"/>
-
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="113dp"

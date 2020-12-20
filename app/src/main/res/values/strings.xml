@@ -11,7 +11,7 @@
 
     <string name="menu_home">我的日记</string>
     <string name="menu_gallery">纪念日</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_slideshow">相册</string>
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
@@ -168,4 +168,56 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="title_settings_dialog">Setting</string>
+
+    <string name="bmob_application_id">fdddf617b4b921349b939dcc2e6dc2fc</string>
+    <string name="avatar_id">53e657158f</string>
+
+    <!--multi image selector 1-->
+
+
+    <string name="minnum">最少选择一张图片</string>
+    <string name="maxnum">最多选择%1$d张图片</string>
+    <string name="all_images">所有图片</string>
+    <string name="sd_disable">SD卡不可用</string>
+    <string name="image">图片</string>
+    <string name="takephoto">拍照</string>
+    <string name="confirm_format">%1$s(%2$d/%3$d)</string>
+    <string name="confirm">确定</string>
+    <string name="open_camera_failure">打开相机失败</string>
+    <string name="permission_storage_denied">请打开存储空间权限</string>
+    <string name="permission_camera_denied">请打开相机权限</string>
+    <string name="all_image">所有图片</string>
+    <string name="total">共</string>
+    <string name="piece">张</string>
+
+    <!--multi image selector 2-->
+
+    <string name="mis_folder_all">All Images</string>
+    <string name="mis_preview">Preview</string>
+    <string name="mis_msg_no_camera">No system camera found</string>
+    <string name="mis_msg_amount_limit">Select images amount is limit</string>
+    <string name="mis_action_done">Done</string>
+    <string name="mis_action_button_string">%1$s(%2$d/%3$d)</string>
+    <string name="mis_photo_unit">Shot</string>
+    <string name="mis_tip_take_photo">Take photo</string>
+    <string name="mis_error_image_not_exist">Image error</string>
+    <string name="mis_error_no_permission">Has no permission</string>
+    <string name="mis_permission_dialog_title">Permission Deny</string>
+    <string name="mis_permission_dialog_ok">OK</string>
+    <string name="mis_permission_dialog_cancel">CANCEL</string>
+    <string name="mis_permission_rationale">Storage read permission is needed to pick files.</string>
+    <string name="mis_permission_rationale_write_storage">Storage write permission is needed to save the image.</string>
+    <string name="select_mode">Select Mode</string>
+    <string name="mode_single">Single-Choice</string>
+    <string name="mode_multi">Multi-Choice</string>
+    <string name="max_select_amount">Max Selected Amount</string>
+    <string name="hint_default_amount">default amount is 9</string>
+    <string name="enable_camera">Enable Camera</string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+    <string name="go_select">Select</string>
+    <string name="glide_plus_icon_string">android.resource://</string>
+    <string name="post_delete_tv_d">拖动到此处，进行删除</string>
+    <string name="post_delete_tv_s">放开手指，进行删除</string>
 </resources>

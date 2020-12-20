@@ -11,7 +11,7 @@
             android:layout_width="269dp"
             android:layout_height="210dp"
             android:id="@+id/card_picture1_view"
-            app:srcCompat="@drawable/dog"
+            app:srcCompat="@drawable/img5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints"

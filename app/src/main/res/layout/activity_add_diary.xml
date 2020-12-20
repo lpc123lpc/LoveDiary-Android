@@ -20,13 +20,14 @@
 
     <EditText
             android:layout_width="300dp"
-            android:layout_height="400dp"
+            android:layout_height="300dp"
             android:id="@+id/add_diary_content"
             tools:ignore="MissingConstraints"
             app:layout_constraintTop_toBottomOf="@+id/add_diary_title"
             android:layout_marginTop="40dp"
             app:layout_constraintStart_toStartOf="@+id/add_diary_title"
-            app:layout_constraintEnd_toEndOf="@+id/add_diary_title"/>
+            app:layout_constraintEnd_toEndOf="@+id/add_diary_title" android:shadowColor="@color/colorPrimaryDark"
+            android:background="@color/colorSakura"/>
 
     <Button
             android:text="确定"

@@ -63,7 +63,7 @@ public class GalleryFragment extends Fragment {
 
     private void initCards(){
         anniversaryCards = new ArrayList<>();
-        anniversaryCards.add(new AnniversaryCard("在一起的日子","wuhu","2020-10-1",R.drawable.dog));
+        anniversaryCards.add(new AnniversaryCard("在一起的日子","国庆国庆","2020-10-1",R.drawable.img5));
     }
 
     public void addCard(AnniversaryCard card){

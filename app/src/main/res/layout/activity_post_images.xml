@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <Button
+        android:text="SEND"
+        android:id="@+id/btn"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/article_post_et_h"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="分享有趣的事"
+        android:layout_below="@+id/btn"
+        android:inputType="textMultiLine"
+        android:maxLength="140"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:textSize="14sp" />
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcv_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:layout_below="@+id/et_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:clipToPadding="false"/>
+    <RelativeLayout
+
+
+        android:layout_alignLeft="@+id/rcv_img"
+        android:layout_alignBottom="@+id/rcv_img"
+        android:layout_alignRight="@+id/rcv_img"
+        android:layout_alignTop="@+id/rcv_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            android:id="@+id/progress"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/article_post_delete"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_red_light"
+        android:gravity="center"
+        android:text="@string/post_delete_tv_d"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+</RelativeLayout>
