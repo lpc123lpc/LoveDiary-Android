@@ -23,8 +23,8 @@ public class SettingsActivity extends AppCompatActivity {
     
     public static class SettingsFragment extends PreferenceFragmentCompat {
         @Override
-        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            setPreferencesFromResource(R.xml.root_preferences, rootKey);
-        }
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        setPreferencesFromResource(R.xml.root_preferences, rootKey);
     }
+}
 }
